@@ -81,12 +81,13 @@ WSGI_APPLICATION = 'medicalProject.wsgi.application'
 #     }
 # }
 
-import dj_database_url
-DATABASES={
-   'default':dj_database_url.parse("postgres://healthwallet_yd4v_user:qndVthfAFYi4i5PBmFaMfO8fkGHcR5iU@dpg-cn7virocmk4c739ntfug-a.oregon-postgres.render.com/healthwallet_yd4v")
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
